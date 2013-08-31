@@ -1,10 +1,11 @@
 Ww::Application.routes.draw do
+  get "users/new"
   get "pages/home"
 
   get "pages/contact"
 
   get "pages/about"
-
+  match '/signup',    to: 'users#new',    via: 'get'
   match '/help',    to: 'pages#help',    via: 'get'
   match '/about',   to: 'pages#about',   via: 'get'
   match '/contact', to: 'pages#contact', via: 'get'
