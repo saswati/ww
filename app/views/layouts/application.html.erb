@@ -7,8 +7,31 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "Women's World", '#', id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Help", help_path %></li>
+          <li><%= link_to "Sign in", '#' %></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<footer>
+  <nav class="round">
+    <ul>
+      <li><%= link_to "About", about_path %></li>
+      <li><%= link_to "Contact",  contact_path %></li>
 
-<%= yield %>
-
+    </ul>
+  </nav>
+</footer>
+<div class="container">
+  <%= yield %>
+</div>
 </body>
 </html>
